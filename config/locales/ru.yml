@@ -1,0 +1,10 @@
+# config/locales/ru.yml
+
+ru:
+  hello: "Привет"
+  goodbye: "До свидания"
+  welcome: "Добро пожаловать"
+  errors:
+    messages:
+      blank: "не может быть пустым"
+      invalid: "недействительно"
