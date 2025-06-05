@@ -1,6 +1,13 @@
-# config/locales/ru.yml
-
 ru:
+  activerecord:
+    errors:
+      messages:
+        blank: "не может быть пустым"
+        invalid: "недопустимое значение"
+  errors:
+    messages:
+      blank: "не может быть пустым"
+      invalid: "недопустимое значение"
   hello: "Привет"
   goodbye: "До свидания"
   welcome: "Добро пожаловать"
