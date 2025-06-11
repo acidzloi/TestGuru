@@ -1,24 +1,47 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# TestGuru
 
-Things you may want to cover:
+Онлайн-платформа для обучения ruby rails. Проект выполняется в рамках обучения в [Thinknetica](http://www.thinknetica.com).
 
-* Ruby version
+## О проекте
 
-* System dependencies
+Приложение позволяет:
+- выбирать тесты по интересующим темам и категориям,
+- проходить тесты, отвечая на вопросы с несколькими вариантами ответов,
+- получать результаты тестирования и отслеживать прогресс.
 
-* Configuration
+## Версия
 
-* Database creation
+Текущая версия: `0.1.0`
 
-* Database initialization
+## Настройки
 
-* How to run the test suite
+- Язык интерфейса: `русский (ru)`
+- Часовой пояс: `Москва`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Страницы
 
-* Deployment instructions
+- [`/about`](http://localhost:3000/about) — информация о проекте
+- [`/about/author`](http://localhost:3000/about/author) — информация об авторе
 
-* ...
+## Сущности проекта
+
+Проект моделирует следующие объекты реального мира:
+
+1. **Автор (Author)** – создатель теста (связан с пользователем)
+2. **Пользователь (User)** – человек, проходящий тесты на платформе.
+3. **Тест (Test)** – набор вопросов, предназначенных для проверки знаний пользователя.
+4. **Категория (Category)** – группа, к которой может принадлежать тест (например, «Ruby», «HTML»).
+5. **Вопрос (Question)** – единичная задача в рамках теста.
+6. **Ответ (Answer)** – один из возможных вариантов ответа на вопрос (может быть правильным или нет).
+7. **Результат (TestPassage)** – фиксирует прохождение теста пользователем и его результат.
+
+## Установка и запуск
+
+```bash
+git clone https://github.com/acidzloi/TestGuru.git
+cd test_guru
+bundle install
+bin/rails db:create db:migrate
+bin/rails s
