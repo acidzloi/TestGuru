@@ -1,11 +1,18 @@
 class Test < ApplicationRecord
-  belongs_to :category
-  has_many :test_passages
-  has_many :users, through: :test_passages
+  def category
+    Category.find(category_id)
+  end
 
+  def questions
+    Question.where(test_id: id)
+  end
+
+# Найти тесты по категории
   def self.titles_by_category(category_title)
-    joins(:category)
-      .where(categories: { title: category_title })
+    category = Category.find_by(title: category_title)
+    return [] unless category
+
+    where(category_id: category.id)
       .order(title: :desc)
       .pluck(:title)
   end

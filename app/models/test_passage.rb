@@ -1,4 +1,9 @@
 class TestPassage < ApplicationRecord
-  belongs_to :user
-  belongs_to :test
+  def user
+    User.find(user_id)
+  end
+
+  def test
+    Test.find(test_id)
+  end
 end

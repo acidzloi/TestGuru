@@ -1,3 +1,5 @@
 class Answer < ApplicationRecord
-  belongs_to :question
+  def question
+    Question.find(question_id)
+  end
 end
