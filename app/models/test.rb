@@ -1,11 +1,5 @@
 class Test < ApplicationRecord
-  def category
-    Category.find(category_id)
-  end
-
-  def questions
-    Question.where(test_id: id)
-  end
+  belongs_to :category
 
 # Найти тесты по категории
   def self.titles_by_category(category_title)
