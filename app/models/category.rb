@@ -1,3 +1,3 @@
-class Category < ApplicationRecordAdd commentMore actions
+class Category < ApplicationRecord
 
 end

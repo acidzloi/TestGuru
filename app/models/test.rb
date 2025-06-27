@@ -1,5 +1,4 @@
 class Test < ApplicationRecord
-  belongs_to :category
 
 # Найти тесты по категории
   def self.titles_by_category(category_title)

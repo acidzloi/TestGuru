@@ -55,3 +55,9 @@ Answer.create!([
   { body: 'Тактика выжженной земли', correct: true, question_id: questions[6].id },
   { body: 'Молниеносная атака', correct: false, question_id: questions[6].id }
 ])
+
+Result.create!([
+  { user_id: users[0].id, test_id: tests[0].id, status: 'started' },
+  { user_id: users[0].id, test_id: tests[1].id, status: 'finished' },
+  { user_id: users[1].id, test_id: tests[0].id, status: 'started' }
+])
