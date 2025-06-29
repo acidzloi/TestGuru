@@ -22,9 +22,9 @@ categories = Category.create!([
 
 # Создание тестов
 tests = Test.create!([
-  { title: 'Крестовые походы', level: 1, category_id: categories[0].id },
-  { title: 'Французская революция', level: 2, category_id: categories[1].id },
-  { title: 'Отечественная война 1812', level: 3, category_id: categories[2].id }
+  { title: 'Крестовые походы', level: 1, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Французская революция', level: 2, category_id: categories[1].id, author_id: users[1].id },
+  { title: 'Отечественная война 1812', level: 3, category_id: categories[2].id, author_id: users[2].id }
 ])
 
 # Создание вопросов
