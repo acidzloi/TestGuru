@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2025_06_29_144114) do
   create_table "results", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "test_id", null: false
-    t.string "status", default: "not started", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["test_id"], name: "index_results_on_test_id"
