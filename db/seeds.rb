@@ -57,7 +57,7 @@ Answer.create!([
 ])
 
 Result.create!([
-  { user_id: users[0].id, test_id: tests[0].id, status: 'started' },
-  { user_id: users[0].id, test_id: tests[1].id, status: 'finished' },
-  { user_id: users[1].id, test_id: tests[0].id, status: 'started' }
+  { user_id: users[0].id, test_id: tests[0].id },
+  { user_id: users[0].id, test_id: tests[1].id },
+  { user_id: users[1].id, test_id: tests[0].id }
 ])
