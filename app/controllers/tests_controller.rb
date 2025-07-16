@@ -5,6 +5,7 @@ class TestsController < ApplicationController
 
   def index
     @tests = Test.all
+    @selected_test = Test.find(params[:id]) if params[:id].present?
   end
 
   private
