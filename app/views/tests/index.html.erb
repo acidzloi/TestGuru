@@ -12,19 +12,6 @@
 
 </table>
 
-<% if @selected_test %>
-  <h2>Selected Test: <%= @selected_test.title %> (Level: <%= @selected_test.level %>)</h2>
-
-  <h3>Questions</h3>
-
-  <table>
-    <tr>
-      <th>Body</th>
-      <th colspan="3">Actions</th>
-    </tr>
-
-    <%= render @selected_test.questions %>
-  </table>
-
-  <p><%= link_to "Add question", new_test_question_path(@selected_test) %></p>
-<% end %>
+<p>
+  <%= link_to 'New test', new_test_path %>
+</p>
