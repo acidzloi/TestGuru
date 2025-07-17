@@ -41,8 +41,6 @@ class TestsController < ApplicationController
   end
 
   def start
-    test_passage = Result.create(user: @user, test: @test)
-    redirect_to test_path(@test)
   end
 
   private

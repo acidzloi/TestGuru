@@ -1,10 +1,11 @@
-<%= form_with(model: [@question, @answer], local: true) do |form| %>
+<% form_model = @answer.new_record? ? [@question, @answer] : @answer %>
 
-  <%= render 'shared/errors', resource: @question %>
+<%= form_with(model: form_model, local: true) do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
 
   <p>
-    <%= form.label :body %> <br>
-    <%= form.text_field :body, id: :answer_body, rows: 7, cols: 60 %>
+    <%= form.label :body %><br>
+    <%= form.text_field :body, id: :answer_body %>
   </p>
 
   <p>
