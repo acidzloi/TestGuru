@@ -40,9 +40,6 @@ class TestsController < ApplicationController
     redirect_to tests_path
   end
 
-  def start
-  end
-
   private
 
   def find_test
