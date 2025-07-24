@@ -1,0 +1,16 @@
+<h2>Test questions</h2>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Correct</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <%= render @test.questions %>
+
+</table>
+
+<p><%= link_to "Add question", new_test_question_path(@test), method: :get %></p>
+
+<p><%= link_to 'All Tests', tests_path %></p>

@@ -1,7 +1,19 @@
 <h1>Show question</h1>
 
-  <p>
-    <%=  @question.body %>
-  </p>
+<p>
+  <%=  @question.body %>
+</p>
 
-<p><%= button_to "Delete", question_path(@question), method: :delete %></p>
+<h2>Answers</h2>
+
+<%= link_to 'New answer', new_question_answer_path(@question) %>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Correct?</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <%= render @question.answers %>
+</table>
