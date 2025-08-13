@@ -37,6 +37,8 @@ gem 'devise', '~> 4.0'
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta'
+gem 'octokit'
+gem 'faraday-retry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +56,7 @@ group :development do
   gem 'spring'
   
   gem 'letter_opener'
+  gem 'dotenv-rails'
 end
 
 group :test do
