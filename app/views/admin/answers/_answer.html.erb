@@ -1,10 +1,10 @@
 <tr>
   <td><%= answer.body %></td>
   <td><%= answer.correct? ? 'Yes' : 'No' %></td>
-  <td><%= link_to 'Show', [:admin, answer] %></td>
-  <td><%= link_to 'Edit', [:edit, :admin, answer] %></td>
-  <td><%= link_to 'Delete',
+  <td><%= link_to t('.show'), [:admin, answer] %></td>
+  <td><%= link_to t('.edit'), [:edit, :admin, answer] %></td>
+  <td><%= link_to t('.delete'),
               [:admin, answer],
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: t('.confirm') } %></td>
 </tr>

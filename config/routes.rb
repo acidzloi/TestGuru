@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'feedbacks/new'
+  get 'feedbacks/create'
   root 'tests#index'
 
   devise_for :users, path: :gurus,
@@ -32,5 +34,7 @@ Rails.application.routes.draw do
       post :gist, to: 'gists#create'
     end
   end
-
+  
+  resources :feedbacks, only: :create
+  get 'feedbacks', to: 'feedbacks#new', as: 'new_feedback'
 end
