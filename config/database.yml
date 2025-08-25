@@ -22,4 +22,8 @@ test:
 
 production:
   <<: *default
-  database: test_guru_production
+  database: 'testguru_pg'
+  username: 'testguru'
+  password: 'ZpykccghLXii8y9ogrMd'
+  host: 'postgresql-testguru.alwaysdata.net'
+  port: '5432'
