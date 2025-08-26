@@ -1,4 +1,4 @@
-class ValidationUtility{
+export default class ValidationUtility {
   constructor(html_object) {
    this.html_object = html_object
    this.value = html_object.value
