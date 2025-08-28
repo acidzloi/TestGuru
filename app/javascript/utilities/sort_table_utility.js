@@ -1,4 +1,4 @@
-class SortTable {
+export default class SortTable {
   constructor(table) {
     this.table = table
     this.rows = table.querySelectorAll('tr')

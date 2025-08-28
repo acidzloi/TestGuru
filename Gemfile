@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.3'
+ruby '~>3.2.3'
 
 gem 'logger', require: false
 
@@ -11,7 +11,8 @@ gem 'rails', '~> 6.1.7', '>= 6.1.7.10'
 
 gem 'rails-i18n', '~> 6.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+#gem 'sqlite3', '~> 1.4'
+gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

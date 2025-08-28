@@ -1,3 +1,5 @@
+import SortTable from './sort_table_utility.js' 
+
 document.addEventListener('turbolinks:load', function() {
   let control = document.querySelector('.sort-by-title')
   if (control) { control.addEventListener('click', sortTable) }
