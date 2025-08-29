@@ -61,3 +61,7 @@ Result.create!([
   { user_id: users[0].id, test_id: tests[1].id },
   { user_id: users[1].id, test_id: tests[0].id }
 ])
+
+Badge.create!([{ name: 'Passed the test on the first try', rule: 'first_try', value: '1', image_url: 'https://test.local/test.png' },
+               { name: 'All first category tests passed', rule: 'all_test_by_level', value: '1', image_url: 'https://test.local/test.png' },
+               { name: 'All tests passed', rule: 'category', value: 'Ruby', image_url: 'https://test.local/test.png' }])

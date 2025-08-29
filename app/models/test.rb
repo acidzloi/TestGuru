@@ -17,6 +17,10 @@ class Test < ApplicationRecord
     joins(:category).where(categories: { title: category_name }).order(title: :desc)
   }
 
+  scope :by_category, lambda { |category_name|
+    joins(:category).where('categories.title = ?', category_name)
+  }
+
   def self.sort_tests_by_category
     sort_by_category.pluck(:title)
   end

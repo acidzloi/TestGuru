@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :badges, only: %i[index new create destroy]
     resources :gists, only: :index
     resources :tests do
       patch :update_inline, on: :member
@@ -37,4 +38,7 @@ Rails.application.routes.draw do
   
   resources :feedbacks, only: :create
   get 'feedbacks', to: 'feedbacks#new', as: 'new_feedback'
+  
+  resources :badges, only: :index
+  get 'my_badges', to: 'badges#my_badges', as: 'my_badges'
 end

@@ -27,6 +27,11 @@ ru:
       answer:
         body: "Ответ"
         correct: "Правильный"
+      badge:
+        name: "Имя"
+        rule: "Правило"
+        value: "Значение"
+        image_url: "Url адрес"
     select:
       prompt: "Выберите"
 
@@ -137,6 +142,27 @@ ru:
       welcom: "Добро пожаловать"
       guru: "гуру"
       logout: "Выход"
+      badges: "Бэйджи"
+    badges:
+      create:
+        success: "Бэйдж был успешно создан."
+      destroy:
+        success: "Бэйдж был успешно удален."
+      index:
+        header: "Бэйджи"
+        create: "Создать"
+        name: "Имя"
+        rule: "Правило"
+        value: "Значение"
+        image_url: "Url адрес"
+        action: "Действие"
+        back: "Назад"
+      badge:
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      new:
+        header: "Создать бейдж"
+        back: "Назад"
 
   users:
     registrations:
@@ -173,6 +199,7 @@ ru:
       logout: "Выход"
       login: "Вход"
       signup: "Зарегестрироваться"
+      badges: "Бейджи"
 
   tests_mailer:
     completed_test:
@@ -194,3 +221,16 @@ ru:
       send: "Отправить"
     create:
       success: "Ваше сообщение успешно отправлено!"
+
+  badges:
+    index:
+      header: "Доступные бэйджи"
+      my_badges: "Мои бейджи"
+      name: "Имя"
+      image_url: "Url адрес"
+    my_badges:
+      header: "Moи бэйджи"
+      badges: "Доступные бейджи"
+      name: "Имя"
+      image_url: "Url адрес"
+      back: "Назад"
