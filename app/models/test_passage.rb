@@ -4,6 +4,31 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_current_question, on: %i[create update]
+  before_save :check_timer_expired
+
+  def time_left
+    return unless test.timer?
+    
+    completion_time - Time.current
+  end
+
+  def completion_time
+    created_at + test.timer.minutes
+  end
+
+  def timer_expired?
+    return false unless test.timer?
+    
+    time_left <= 0
+  end
+
+  private
+
+  def check_timer_expired
+    return unless test.timer? && timer_expired?
+
+    self.current_question = nil
+  end
 
   PASSING_PERCENTAGE = 85
 

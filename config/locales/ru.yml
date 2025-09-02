@@ -56,6 +56,10 @@ ru:
       passed: "Тест пройден"
       failed: "Тест не пройден"
       back: "Назад"
+    update:
+      time_expired: "Время на выполнение теста истекло"
+    show:
+      time_expired: "Время на выполнение теста истекло"
   
   admin:
     tests:

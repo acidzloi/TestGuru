@@ -2,11 +2,20 @@ class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[show update result]
   before_action :authenticate_user!
 
-  def show; end
+  def show
+    if @test_passage.timer_expired?
+      redirect_to result_test_passage_path(@test_passage), alert: t('.time_expired')
+    end
+  end
 
   def result; end
 
   def update
+    if @test_passage.timer_expired?
+      redirect_to result_test_passage_path(@test_passage), alert: t('.time_expired')
+      return
+    end
+
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
