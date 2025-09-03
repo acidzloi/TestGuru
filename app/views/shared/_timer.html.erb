@@ -1,0 +1,5 @@
+<p><%= content_tag :span,
+  '',
+  id: 'timer',
+  data: { completion_time: @test_passage.created_at + @test_passage.test.timer.minutes }
+%></p>

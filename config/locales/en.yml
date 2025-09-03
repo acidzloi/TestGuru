@@ -91,6 +91,10 @@ en:
       passed: "Test passed"
       failed: "Test failed"
       back: "Back"
+    update:
+      time_expired: "Time is up"
+    show:
+      time_expired: "Time is up"
 
   admin:
     tests:

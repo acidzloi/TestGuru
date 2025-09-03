@@ -1,14 +1,30 @@
 class TestPassage < ApplicationRecord
+  PASSING_PERCENTAGE = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_current_question, on: %i[create update]
 
-  PASSING_PERCENTAGE = 85
+  def time_left
+    return unless test.timer?
+    
+    completion_time - Time.current
+  end
+
+  def completion_time
+    created_at + test.timer.minutes
+  end
+
+  def timer_expired?
+    return false unless test.timer?
+    
+    time_left <= 0
+  end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || timer_expired?
   end
 
   def accept!(answer_ids)
@@ -51,7 +67,11 @@ class TestPassage < ApplicationRecord
 
   def before_validation_set_current_question
     return self.current_question = set_first_question if current_question.nil?
-
-    self.current_question = next_question
+    
+    if timer_expired?
+      self.current_question = nil
+    else
+      self.current_question = next_question
+    end
   end
 end
